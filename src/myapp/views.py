@@ -1,14 +1,13 @@
 from django.http import HttpResponse
-from django.views.generic import TemplateView
+from django.views import View
 
 from .tasks import show_hello_world
 
 
-# Create your views here.
+class QuotesEndpoint(View):
+    def get(self, request):
+        return HttpResponse('result')
 
-
-class ShowHelloWorld(TemplateView):
-
-    def get(self, *args, **kwargs):
+    def post(self, request):
         show_hello_world.apply()
-        return HttpResponse("Hello, World!")
+        return HttpResponse('result from post')
