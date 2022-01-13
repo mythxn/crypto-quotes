@@ -14,6 +14,13 @@ app = Celery('core')
 
 app.config_from_object('django.conf:settings', namespace='CELERY')
 
+app.conf.beat_schedule = {
+    'pull-current-rate': {
+        'task': 'myapp.tasks.hourly_get_quotes',
+        'schedule': 3600,
+    },
+}
+
 app.autodiscover_tasks()
 
 

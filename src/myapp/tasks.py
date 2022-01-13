@@ -14,4 +14,3 @@ logger = logging.getLogger("celery")
 @app.task
 def hourly_get_quotes():
     get_current_rate(settings.BTC_TICKER, settings.USD_TICKER)
-

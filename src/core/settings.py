@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myapp.apps.MyappConfig',
     'celery',
+    'django_celery_beat',
 ]
 
 MIDDLEWARE = [
@@ -122,6 +123,7 @@ MEDIA_URL = '/media/'
 
 CELERY_BROKER_URL = 'redis://redis:6379/0'
 CELERY_RESULT_BACKEND = 'redis://redis:6379/0'
+CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
 
 STATIC_ROOT = './static/'
 MEDIA_ROOT = './media/'
