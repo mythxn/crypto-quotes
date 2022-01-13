@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "05973d2e-ed49-44d5-9f0b-ee0a30cbf9f6",
+		"name": "/api/v1/quotes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-token",
+						"value": "I0sC0eb50q",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "asdf",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://0.0.0.0:8000/api/v1/quotes/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"quotes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-token",
+						"value": "I0sC0eb50q",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "asdf",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://0.0.0.0:8000/api/v1/quotes/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"quotes",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

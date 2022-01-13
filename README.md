@@ -14,7 +14,7 @@ More make commands defined in the `Makefile` for easy access to shell and logs t
 ---
 **API Endpoints:**
 
-The API endpoints are protected and can only be accessed by passing an api_token header in the request, which nginx handles. The value for the token is: `I0sC0eb50q`
+The API endpoints are protected and can only be accessed by passing an `api-token` header in the request, which nginx handles. The value for the token is: `I0sC0eb50q`. Please find the postman collection for the below two requests [here](https://github.com/mythxn/crypto-quotes/blob/main/postman-collection.json).
 
 ---
 
