@@ -24,7 +24,7 @@ GET /api/v1/quotes
 ```
 *Sample Response*
 
-```
+```json
 [
     {
         "model": "myapp.exchangerate",
@@ -60,7 +60,7 @@ POST /api/v1/quotes
 ```
 *Sample Response*
 
-```
+```json
 [
     {
         "model": "myapp.exchangerate",
