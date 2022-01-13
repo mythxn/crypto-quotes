@@ -121,10 +121,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
-CELERY_BROKER_URL = 'redis://redis:6379/0'
-CELERY_RESULT_BACKEND = 'redis://redis:6379/0'
-CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
-
 STATIC_ROOT = './static/'
 MEDIA_ROOT = './media/'
 
@@ -149,11 +145,14 @@ LOGGING = {
 }
 
 # ---------------- Local Settings ---------------------------------------
-# Put your local settings in core directory to override this settings
-# File name should be local_settings.py
-try:
-    from .local_settings import *
-except ImportError:
-    print('No Local Settings Found')
+
+CELERY_BROKER_URL = 'redis://redis:6379/0'
+CELERY_RESULT_BACKEND = 'redis://redis:6379/0'
+CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
+
+ALPHAVANTAGE_API_KEY = os.getenv('ALPHAVANTAGE_API_KEY')
+
+BTC_TICKER = 'BTC'
+USD_TICKER = 'USD'
 
 # ---------------- End Local Settings ------------------------------------

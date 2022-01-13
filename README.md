@@ -4,9 +4,17 @@ Dockerized microservice that pulls BTC/USD prices and saves them to a database w
 
 *Stack: Docker, Django, Redis, Nginx, Celery, Postgres*
 
+To run the application:
+```
+1. make build
+2. make up
+```
+More make commands defined in the `Makefile` for easy access to shell and logs to each container.
+
+---
 **API Endpoints:**
 
-The API endpoints are protected and can only be accessed by passing an api-token header in the request, which nginx handles. The value for the token is: `I0sC0eb50q`
+The API endpoints are protected and can only be accessed by passing an api_token header in the request, which nginx handles. The value for the token is: `I0sC0eb50q`
 
 ---
 

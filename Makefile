@@ -28,8 +28,8 @@ shell-postgres:
 log-nginx:
 	docker-compose logs nginx
 
-log-web:
-	docker-compose logs web
+log-django:
+	docker-compose logs django
 
-log-db:
-	docker-compose logs db
+log-postgres:
+	docker-compose logs postgres
