@@ -12,7 +12,7 @@ class QuotesEndpoint(View):
     serialized_fields = ('exchange_rate', 'last_refreshed')
 
     def get(self, request):
-        exchange_rate = ExchangeRate.objects.all().order_by('last_refreshed')
+        exchange_rate = ExchangeRate.objects.all()
         er_list = serializers.serialize('json', exchange_rate, fields=self.serialized_fields)
         return HttpResponse(er_list, content_type="text/json-comment-filtered")
 
