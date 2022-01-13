@@ -3,10 +3,10 @@ from dateutil import parser
 from django.conf import settings
 
 
-def get_latest_er(BTC_TICKER, USD_TICKER):
+def get_current_rate(from_ticker, to_ticker):
     av_api_key = settings.ALPHAVANTAGE_API_KEY
     cc = CryptoCurrencies(key=av_api_key)
-    resp, _ = cc.get_digital_currency_exchange_rate(BTC_TICKER, USD_TICKER)
+    resp, _ = cc.get_digital_currency_exchange_rate(from_ticker, to_ticker)
 
     from myapp.models import ExchangeRate
     return ExchangeRate.objects.create(
